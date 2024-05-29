@@ -1,0 +1,26 @@
+project:
+  type: book
+
+book:
+  title: "MathematicalAnalysis"
+  author: "Norah Jones"
+  date: "2024/5/28"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+    - part: "第九章：数项级数"
+      chapters: 
+        - 无穷乘积.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+
+

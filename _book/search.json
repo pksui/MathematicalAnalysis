@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "2  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever."
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "无穷乘积.html#无穷乘积的定义",
+    "href": "无穷乘积.html#无穷乘积的定义",
+    "title": "3  无穷乘积",
+    "section": "3.1 无穷乘积的定义",
+    "text": "3.1 无穷乘积的定义\n设\\(\\displaystyle p_1,p_2,...,p_n,..,(p_n\\neq0)\\)是无穷可列个（一共有无穷个，但是能把它们都列出来）实数，我们称它们的“积” \\[\np_1 \\cdot p_2 \\cdot \\ldots \\cdot p_n \\cdot \\ldots\n\\]\n为无穷乘积，记为\\(\\displaystyle \\prod_{n=1}^{\\infty}p_n\\),其中\\(p_n\\)称为无穷乘积的通项或一般项。\n\n\n\n\n\n\nTip\n\n\n\n这里的介绍中要求\\(\\displaystyle p_n\\neq0\\)，因为如果有一个元素为0的话，就没有研究的必要了。\n\n\n无穷乘积\\(\\displaystyle \\prod_{n=1}^{\\infty}p_n\\)的“部分积数列”\\(\\{P_n\\}\\):\n\\[\n\\begin{align}\nP_1 &= p_1,  \\\\\nP_2 &= p_1 \\cdot p_2 \\\\\nP_3 &= p_1 \\cdot p_2 \\cdot p_3 \\\\\n\\cdots & \\cdots \\cdots \\cdots \\cdots  \\\\\nP_n &= p_1 \\cdot p_2 \\cdot \\cdots \\cdot p_n = \\prod_{k=1}^{n}p_k, \\\\\n\\cdots & \\cdots \\cdots \\cdots \\cdots\n\\end{align}\n\\]\n这里的级数让我想到了之前学过无穷数列，关于无穷数列我们关心的是在无穷远处它会变成什么样子，那对于级数我们关心的是这一组数据（虽然有无穷个）相乘的结果，可能还有它们相加的结果。\n部分积数列是一个数列，这很重要，虽然每个元素可能由很多个项去相乘得到的。这个数列的项数是无穷个，因为无穷乘积的部分乘积叫部分积数列，而无穷乘积的项是无限的，也就意味着部分积数列可以无限的延展下去。\n\n3.1.1 定义\n\nDefinition 3.1 如果部分积数列\\(\\displaystyle \\{P_n\\}\\) 收敛于一个非零的有限数\\(\\displaystyle P\\)，则称无穷乘积\\(\\displaystyle \\prod_{n=1}^{\\infty}p_n\\)收敛，且称\\(\\displaystyle P\\)为它的积，记为\n\\[\n\\prod_{n=1}^{\\infty}p_n = P\n\\]\n如果\\(\\displaystyle \\{P_n\\}\\)发散或\\(\\displaystyle \\{P_n\\}\\)收敛于0，则称无穷乘积\\(\\displaystyle \\{P_n\\}\\)发散。\n\n\n\n\n\n\n\nWarning\n\n\n\n当 \\(\\displaystyle \\lim_{n \\to \\infty} P_n = 0\\)时，我们称无穷乘积\\(\\displaystyle \\prod_{n=1}^{\\infty}p_n\\)发散于0，而不是收敛于0。\n\n\n这里就是很反直觉，如果一个数列收敛于0，我们称这个数列是收敛的；如果一个级数收敛于0呢？\n级数是什么？如果有一个数列\\(\\displaystyle a_1,a_2,a_3,\\cdots,a_n,\\cdots\\),那么称\\(\\displaystyle \\{S_n=a_1+a_2+\\cdots+a_n\\}\\)为其部分和数列，而如果把\\(\\displaystyle n \\rightarrow \\infty\\),这时就出现了级数\\(\\displaystyle \\sum_{n=1}^{\\infty}a_n\\),如果一个级数收敛于0，比如说\\(\\displaystyle \\sum_{n=1}^{\\infty}(-1)^{n+1}(\\frac{1}{n})\\)，那对应的无穷乘积呢？也是趋于0，但是它不收敛，其中缘由要仔细考虑啊。\n\n\n3.1.2 定理\n\nTheorem 3.1 如果无穷乘积\\(\\displaystyle \\prod_{n=1}^{\\infty}p_n\\)收敛，则\n\\[\n\\displaystyle \\lim_{n \\to \\infty}p_n = 1;\n\\tag{3.1}\\]\n\\[\n\\displaystyle \\lim_{m \\to \\infty} \\prod_{n=m+1}^{\\infty}p_n = 1.\n\\tag{3.2}\\]\n\n证      设\\(\\displaystyle \\prod_{n=1}^{\\infty}p_n\\)的部分积数列为\\(\\displaystyle \\{P_n\\}\\)，则\n\\[\np_n = \\frac{P_{n+1}}{P_n}\n\\]\n这时，两边取极限\n\\[\n\\lim_{n \\to \\infty}p_n = \\lim_{n \\to \\infty}\\frac{P_{n+1}}{P_n} = 1\n\\]\n对于第二个(Equation 3.2)\n\\[\n\\prod_{n=m+1}^{\\infty}p_n = \\frac{\\displaystyle \\prod_{n=1}^{\\infty}p_n}{P_m} = \\frac{\\displaystyle \\prod_{n=1}^{\\infty}p_n}{\\displaystyle \\prod_{n=1}^{m}p_n}\n\\]\n两边对\\(\\displaystyle m\\)取极限\n\\[\n\\lim_{m \\to \\infty}\\prod_{n=m+1}^{\\infty}p_n = \\lim_{m \\to \\infty}\\frac{\\displaystyle \\prod_{n=1}^{\\infty}p_n}{\\displaystyle \\prod_{n=1}^{m}p_n} = 1\n\\]\n\n\n\n\n\n\nNote\n\n\n\n我们常把\\(\\displaystyle p_n\\)记为\\(\\displaystyle 1+a_n\\),则定理的第一个可表示为：如果无穷乘积\\(\\displaystyle \\prod_{n=1}^{\\infty}a_n+1\\)收敛，则\\(\\displaystyle \\lim_{n \\to \\infty}a_n = 0\\)"
+  }
+]
